@@ -28,7 +28,7 @@ public class CrossFadeExampleCS : MonoBehaviour
 		
 		swap = !swap;
 
-		yield return StartCoroutine(ScreenWipe.use.CrossFade (swap? camera1 : camera2, swap? camera2 : camera1, fadeTime));
+		yield return StartCoroutine(ScreenWipe.use.CrossFadeToNewScene (Camera.main, "GridSpawner", fadeTime));
 		
 		inProgress = false;
 	}
