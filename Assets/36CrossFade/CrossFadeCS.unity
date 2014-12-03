@@ -84,7 +84,6 @@ GameObject:
   - 4: {fileID: 26}
   - 114: {fileID: 25}
   - 114: {fileID: 22}
-  - 114: {fileID: 20}
   m_Layer: 0
   m_Name: _Manager
   m_TagString: Untagged
@@ -92,20 +91,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 19}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41271d4ea67410f25c5e853a5e2ec44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera1: {fileID: 23}
-  camera2: {fileID: 21}
-  fadeTime: 2
 --- !u!20 &21
 Camera:
   m_ObjectHideFlags: 0
@@ -144,7 +129,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606287e47e14e4576b7d29a13e06a967, type: 3}
   m_Name: 

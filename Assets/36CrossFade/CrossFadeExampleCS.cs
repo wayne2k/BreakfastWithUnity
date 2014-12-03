@@ -14,26 +14,21 @@ public class CrossFadeExampleCS : MonoBehaviour
 		if(Input.GetKeyDown("space"))
 		{
 			Debug.Log("Hey!");
-			StartCoroutine(DoFade());
+			DoFade();
 		}
 	}
 	
-	IEnumerator DoFade ()
+	void DoFade ()
 	{
 		if(inProgress)
 		{
-			yield break;
+			return;
 		}
 		inProgress = true;
 		
 		swap = !swap;
 
-		while(true)
-		{
-			Debug.Log (ScreenWipe.use.CrossFade (swap? camera1 : camera2, swap? camera2 : camera1, fadeTime));
-			Debug.Log (ScreenWipe.use.CrossFade (swap? camera1 : camera2, swap? camera2 : camera1, fadeTime));
-			yield return ScreenWipe.use.CrossFade (swap? camera1 : camera2, swap? camera2 : camera1, fadeTime);
-		}
+		StartCoroutine(ScreenWipe.use.CrossFade (swap? camera1 : camera2, swap? camera2 : camera1, fadeTime));
 		
 		inProgress = false;
 	}
